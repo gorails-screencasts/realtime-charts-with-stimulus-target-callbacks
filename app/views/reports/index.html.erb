@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reports</h1>
+
+<%= turbo_stream_from "reports" %>
+
+<div data-controller="chart">
+  <div data-chart-target="chart"></div>
+
+  <div id="reports">
+    <% @reports.each do |report| %>
+      <%= render report %>
+      <p>
+        <%= link_to "Show this report", report %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New report", new_report_path %>
+</div>

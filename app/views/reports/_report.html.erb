@@ -1,0 +1,11 @@
+<%= tag.div id: dom_id(report), data: { chart_target: "report", date: report.date, value: report.value } do %>
+  <p>
+    <strong>Date:</strong>
+    <%= report.date %>
+  </p>
+
+  <p>
+    <strong>Value:</strong>
+    <%= report.value %>
+  </p>
+<% end %>
